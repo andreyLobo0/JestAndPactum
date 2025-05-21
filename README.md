@@ -141,11 +141,18 @@ npm test -- tests/api/Login/login.test.ts
 
 ## 📜 Scripts NPM Disponíveis
 
-- `npm test`: Executa todos os testes
-- `npm run test:watch`: Executa testes em modo watch
-- `npm run test:coverage`: Gera relatório de cobertura
-- `npm run lint`: Executa verificação de lint
-- `npm run build`: Compila o código TypeScript
+```json
+{
+  "scripts": {
+    "test": "jest",
+    "test:login": "jest tests/api/Login/*",
+    "test:users": "jest tests/api/Users/*",
+    "test:product": "jest tests/api/Product/*",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write ."
+  }
+}
+```
 
 ## 📌 Notas
 
