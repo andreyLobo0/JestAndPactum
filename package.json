@@ -1,0 +1,30 @@
+{
+  "name": "jestandpactum",
+  "version": "1.0.0",
+  "description": "Repositório de aplicação de testes de API utilizando Jest + Pactum",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:login": "jest tests/api/Login/*",
+    "test:users": "jest tests/api/Users/*",
+    "test:product": "jest tests/api/Product/*",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write ."
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^9.8.0",
+    "@types/jest": "^29.5.14",
+    "@typescript-eslint/eslint-plugin": "^8.32.1",
+    "@typescript-eslint/parser": "^8.32.1",
+    "eslint": "^9.27.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-prettier": "^5.4.0",
+    "jest": "^29.7.0",
+    "pactum": "^3.7.6",
+    "prettier": "^3.5.3",
+    "ts-jest": "^29.3.4",
+    "typescript": "^5.8.3"
+  }
+}
