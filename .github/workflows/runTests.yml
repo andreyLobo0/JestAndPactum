@@ -1,0 +1,45 @@
+name: Tests Run
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Escolha o ambiente: dev, staging ou qa'
+        required: true
+        default: 'dev'
+        type: choice
+        options:
+          - dev
+          - qa
+          - sandbox
+      testSuite:
+        description: 'Escolha a suíte de teste: all, login, users e products'
+        required: true
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - login
+          - users
+          - products
+
+jobs:
+  test-auth:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+      - name: Install dependencies
+        run: npm install
+      - name: Run tests
+        run: npm run test:${{ github.event.inputs.testSuite }}
+        env:
+          ENV: ${{ github.event.inputs.environment }}
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ github.event.inputs.environment }}-${{ github.event.inputs.testSuite }}-auth
+          path: html-report/

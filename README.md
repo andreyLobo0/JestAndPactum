@@ -10,6 +10,18 @@
 
 Repositório dedicado à automação de testes de API utilizando Jest como framework de teste e Pactum como biblioteca de teste de API.
 
+## 🔍 Sobre o PactumJS
+
+PactumJS é uma biblioteca de testes de API REST que torna a automação de APIs mais fácil e divertida. Principais recursos:
+
+- **Sintaxe Fluente**: Permite encadear métodos de forma intuitiva
+- **Validação de Schema**: Suporte nativo a JSON Schema
+- **Assertions Poderosas**: Validações robustas de resposta
+- **Mock Server**: Capacidade de simular respostas de API
+- **Integração**: Funciona perfeitamente com Jest, Mocha e Cucumber
+
+📚 **Documentação Oficial**: [PactumJS Documentation](https://pactumjs.github.io/)
+
 ## 🚀 Características
 
 - **Linguagem**: TypeScript

@@ -4,7 +4,7 @@
   "description": "Repositório de aplicação de testes de API utilizando Jest + Pactum",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test:all": "jest",
     "test:login": "jest tests/api/Login/*",
     "test:users": "jest tests/api/Users/*",
     "test:product": "jest tests/api/Product/*",
